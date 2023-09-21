@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 export async function get(context) {
-	const posts = await getCollection('wiersze');
+	const posts = await getCollection('dla mamy i dziecka');
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
