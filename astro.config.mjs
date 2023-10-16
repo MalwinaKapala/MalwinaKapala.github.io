@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://malwinakapala.github.io',
+	site: 'https://wierszemalwiny.pl',
 	integrations: [mdx(), sitemap()],
 });
