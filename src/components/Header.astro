@@ -4,16 +4,14 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
+	<!-- menu hack -->
 	<nav>
-		<h2><a href="/wiersze">{SITE_TITLE}</a></h2>
+		<h2 class="site-title"><a href="/wiersze">{SITE_TITLE}</a></h2>
 		<div class="internal-links">	
 			<HeaderLink href="/wiersze">Wiersze</HeaderLink>
 			<HeaderLink href="/dla-mamy-i-dziecka">Dla mamy i dziecka</HeaderLink>
 			<HeaderLink href="/ptaki">Ptaki</HeaderLink>
 			<HeaderLink href="/omnie">O mnie</HeaderLink>
-		</div>
-		<div class="social-links">
-			
 		</div>
 	</nav>
 </header>
@@ -55,6 +53,14 @@ import { SITE_TITLE } from '../consts';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+			font-size: 16px;
+		}
+		h2.site-title {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+		nav {
+			display: block;
 		}
 	}
 </style>
