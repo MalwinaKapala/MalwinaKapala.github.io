@@ -1,7 +1,15 @@
 ---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-  <meta 
-    http-equiv="refresh" 
-    content={ `0; url=${ "/wiersze" }` } 
-  />
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <meta s
+      http-equiv="refresh" 
+      content={ `0; url=${ "/wiersze" }` } 
+    />
+  </head>
+</html>
