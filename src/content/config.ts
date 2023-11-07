@@ -10,6 +10,7 @@ const wiersze = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		draft: z.boolean().optional(),
+		mp3: z.string().optional(),
 	}),
 });
 
@@ -23,6 +24,7 @@ const dlamamyidziecka = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		draft: z.boolean().optional(),
+		mp3: z.string().optional(),
 	}),
 });
 
@@ -36,6 +38,7 @@ const ptaki = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		draft: z.boolean().optional(),
+		mp3: z.string().optional(),
 	}),
 });
 
