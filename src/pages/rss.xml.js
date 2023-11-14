@@ -39,7 +39,7 @@ export async function GET(context) {
 		<itunes:email>example@example.com</itunes:email>
 		<itunes:category text="Poetry" />
 		<image>
-		  <url>https://wierszemalwiny.pl/kolaz2copy.JPG</url>
+		  <url>https://wierszemalwiny.pl/kolaz2copy.jpg</url>
 		  <title>Wiersze Malwiny</title>
 		  <link>https://wierszemalwiny.pl</link>
 		</image>
@@ -50,12 +50,12 @@ export async function GET(context) {
 		<itunes:keywords>wiersze,mamy,dziecka,ptaki,poetry</itunes:keywords>
 		<copyright>Malwina Kapała 2023</copyright>
 		<description>Wiersze Malwiny</description>
-		<googleplay:image href="https://wierszemalwiny.pl/kolaz2copy.JPG" />
+		<googleplay:image href="https://wierszemalwiny.pl/kolaz2copy.jpg" />
 		<language>pl-pl</language>
 		<itunes:explicit>no</itunes:explicit>
 		<pubDate>Mon, 6 Nov 2023 23:23:23 CEST</pubDate>
 		<link>https://wierszemalwiny.pl/rss.xml</link>
-		<itunes:image href="https://wierszemalwiny.pl/kolaz2copy.JPG" />
+		<itunes:image href="https://wierszemalwiny.pl/kolaz2copy.jpg" />
 	`,
 	});
 }
