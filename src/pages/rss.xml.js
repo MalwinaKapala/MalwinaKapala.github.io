@@ -23,7 +23,7 @@ export async function GET(context) {
 			};
 			if (post.data.mp3 !== undefined) {
 				item.enclosure = {
-					url: `${context.site}${post.data.mp3}`,
+					url: `${context.site}{post.data.mp3}`,
 					length: 120,
 					type: 'mp3'
 				};
@@ -34,14 +34,14 @@ export async function GET(context) {
 		<rawvoice:rating>TV-G</rawvoice:rating>
 		<rawvoice:location>Toruń, Poland</rawvoice:location>
 		<rawvoice:frequency>Weekly</rawvoice:frequency>
-		<author>Malwina Kapała</author>
+		<author>Malwina Kapała</author>	
 		<itunes:author>Malwina Kapała</itunes:author>
 		<itunes:email>example@example.com</itunes:email>
 		<itunes:category text="Poetry" />
 		<image>
-		  <url>https://wierszemalwiny.pl/kolaz2copy.jpg</url>
+		  <url>${context.site}podcast-cover.jpg</url>
 		  <title>Wiersze Malwiny</title>
-		  <link>https://wierszemalwiny.pl</link>
+		  <link>${context.site}</link>
 		</image>
 		<itunes:owner>
 		  <itunes:name>Malwina Kapała</itunes:name>
@@ -50,12 +50,12 @@ export async function GET(context) {
 		<itunes:keywords>wiersze,mamy,dziecka,ptaki,poetry</itunes:keywords>
 		<copyright>Malwina Kapała 2023</copyright>
 		<description>Wiersze Malwiny</description>
-		<googleplay:image href="https://wierszemalwiny.pl/kolaz2copy.jpg" />
+		<googleplay:image href="${context.site}podcast-cover.jpg" />
 		<language>pl-pl</language>
 		<itunes:explicit>no</itunes:explicit>
 		<pubDate>Mon, 6 Nov 2023 23:23:23 CEST</pubDate>
-		<link>https://wierszemalwiny.pl/rss.xml</link>
-		<itunes:image href="https://wierszemalwiny.pl/kolaz2copy.jpg" />
+		<link>${context.site}rss.xml</link>
+		<itunes:image href="${context.site}podcast-cover.jpg" />
 	`,
 	});
 }
