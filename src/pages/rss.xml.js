@@ -36,7 +36,7 @@ export async function GET(context) {
 		<rawvoice:frequency>Weekly</rawvoice:frequency>
 		<author>Malwina Kapała</author>	
 		<itunes:author>Malwina Kapała</itunes:author>
-		<itunes:email>example@example.com</itunes:email>
+		<itunes:email>podcast@wierszemalwiny.pl</itunes:email>
 		<itunes:category text="Poetry" />
 		<image>
 		  <url>${context.site}podcast-cover.jpg</url>
