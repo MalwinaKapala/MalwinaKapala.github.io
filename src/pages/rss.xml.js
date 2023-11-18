@@ -23,7 +23,7 @@ export async function GET(context) {
 			};
 			if (post.data.mp3 !== undefined) {
 				item.enclosure = {
-					url: `${context.site}{post.data.mp3}`,
+					url: `${context.site}${post.data.mp3}`,
 					length: 120,
 					type: 'mp3'
 				};
