@@ -50,6 +50,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.last-updated-on {
 				font-style: italic;
+			}	
+			.flex-container {
+				display: flex;
+			}
+			.flex-child {
+    			flex: 1;
+			}
+			@media screen and (max-width: 600px) 
+			{
+				.flex-container {
+					display: block;
+				}
 			}
 		</style>
 	</head>
@@ -57,25 +69,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article>
-				<div class="hero-image">
+			<article class="flex-container">
+				<div class="hero-image flex-child">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+					<div class="date">
+						Dodano <FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									Ostatnia aktualizacja <FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
 					</div>
+				</div>
+				<div class="prose flex-child">
 					<slot />
 				</div>
 			</article>

@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'pre'>;
+
+const { title, ...props } = Astro.props;
+---
+
+<div id="flex-container">
+    <div style="align-self: flex-start">
+        <div class="poem">
+            <h1>{title}</h1>
+            <h2>Malwina Kapała</h2>
+            
+            <slot/>
+        </div>
+    </div>
+</div>

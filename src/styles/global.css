@@ -152,3 +152,79 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+
+h2 {
+  z-index: 1;
+  font-family: 'Gotham', 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Set display preferences for description. */
+
+.description {
+  z-index: 2;
+  margin: 10px 5% 15px 5%;
+  font-family: 'Gotham', 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.45em;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;	
+  margin: 0px auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.poem {
+  margin: auto;
+  /*padding: 10px 0;*/
+  font-family: Baskerville;
+  font-size: 18px;
+  text-align: left;
+}
+
+.poem > p {
+  margin-bottom: 15px;
+  line-height: 1.45em;
+  white-space: pre-line	;
+}
+
+.poem h1,
+.poem h2 {
+  font-family: Baskerville;
+  font-weight: normal;
+  text-align: center;
+}
+
+.poem h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.poem h2 {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.poem h2+p:first-letter {
+  float: left;
+  font-size: 64px;
+  margin: 12px 5px 0px 0px;
+}
+
+.poem p:first-line {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.poem p:last-child {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
