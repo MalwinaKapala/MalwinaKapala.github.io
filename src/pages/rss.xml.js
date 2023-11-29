@@ -42,6 +42,8 @@ export async function GET(context) {
 		<itunes:email>podcast@wierszemalwiny.pl</itunes:email>
 		<itunes:category text="Kids &amp; Family">
   			<itunes:category text="Stories for Kids"/>
+			<itunes:category text="Parenting"/>
+			<itunes:category text="Pets &amp; Animals"/>
 		</itunes:category>
 		<image>
 		  <url>${context.site}podcast-cover.jpg</url>
