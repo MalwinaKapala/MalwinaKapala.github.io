@@ -9,10 +9,11 @@ export async function GET(context) {
 	const posts = [...wiersze, ...dlamamyidziecka, ...ptaki];
 	return rss({
 		xmlns: {'googleplay': 'http://www.google.com/schemas/play-podcasts/1.0',
-			    'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-				'atom': 'http://www.w3.org/2005/Atom',
-				'rawvoice': 'http://www.rawvoice.com/rawvoiceRssModule/',
-				'content': 'http://purl.org/rss/1.0/modules/content/'},
+			'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+			'atom': 'http://www.w3.org/2005/Atom',
+			'podcast': "https://podcastindex.org/namespace/1.0",
+			'rawvoice': 'http://www.rawvoice.com/rawvoiceRssModule/',
+			'content': 'http://purl.org/rss/1.0/modules/content/'},
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
 		site: context.site,
@@ -34,10 +35,14 @@ export async function GET(context) {
 		<rawvoice:rating>TV-G</rawvoice:rating>
 		<rawvoice:location>Toruń, Poland</rawvoice:location>
 		<rawvoice:frequency>Weekly</rawvoice:frequency>
-		<author>Malwina Kapała</author>	
+		<author>Malwina Kapała</author>
+                <podcast:locked>no</podcast:locked>
+		<podcast:guid>23e11671-a570-5a96-88ca-6b1d22df6fdf</podcast:guid>
 		<itunes:author>Malwina Kapała</itunes:author>
 		<itunes:email>podcast@wierszemalwiny.pl</itunes:email>
-		<itunes:category text="Kids &amp; Family" />
+		<itunes:category text="Kids &amp; Family">
+  			<itunes:category text="Stories for Kids"/>
+		</itunes:category>
 		<image>
 		  <url>${context.site}podcast-cover.jpg</url>
 		  <title>Wiersze Malwiny</title>
@@ -45,7 +50,7 @@ export async function GET(context) {
 		</image>
 		<itunes:owner>
 		  <itunes:name>Malwina Kapała</itunes:name>
-		  <itunes:email>example@example.com</itunes:email>
+		  <itunes:email>podcast@wierszemalwiny.pl</itunes:email>
 		</itunes:owner>
 		<itunes:keywords>wiersze,mamy,dziecka,ptaki,poetry</itunes:keywords>
 		<copyright>Malwina Kapała 2023</copyright>
