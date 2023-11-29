@@ -37,7 +37,7 @@ export async function GET(context) {
 		<author>Malwina Kapała</author>	
 		<itunes:author>Malwina Kapała</itunes:author>
 		<itunes:email>podcast@wierszemalwiny.pl</itunes:email>
-		<itunes:category text="Poetry" />
+		<itunes:category text="Kids &amp; Family" />
 		<image>
 		  <url>${context.site}podcast-cover.jpg</url>
 		  <title>Wiersze Malwiny</title>
