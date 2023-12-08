@@ -27,17 +27,16 @@ jobs:
           cache: yarn
           cache-dependency-path: "./yarn.lock"
       
-      - name: Install
-        shell: "bash"
-        run: |
-          cd .
-          yarn install
 
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      
       - name: Build
-        shell: "bash"
-        run: |
-          cd .
-          yarn run build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
