@@ -26,22 +26,22 @@ jobs:
           check-latest: true
           cache: yarn
           cache-dependency-path: "./yarn.lock"
-      
+
 
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
           cmd: install
-      
+
       - name: Build
         uses: borales/actions-yarn@v4
         with:
           cmd: run build
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist/" 
+          path: "./dist/"
 
   deploy:
     needs: build
