@@ -16,5 +16,10 @@
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.16.5",
     "typescript": "^5.9.3"
+  },
+  "resolutions": {
+    "braces": "^3.0.3",
+    "micromatch": "^4.0.8",
+    "mdast-util-to-hast": "^13.2.0"
   }
 }
